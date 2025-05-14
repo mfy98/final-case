@@ -5,31 +5,20 @@ ve Postman ile hazır API test koleksiyonu gibi bonus özellikler de içermekted
 Tech Stack
 
 Java 21
-
 Spring Boot 3
-
 Spring WebFlux (Reactive)
-
 Spring Data JPA & Hibernate
-
 Spring Security + JWT
-
 Spring Cloud Gateway (API Gateway)
-
 PostgreSQL
-
 Docker & Docker Compose
-
 Swagger/OpenAPI
-
 Postman (Collection dosyası dahil)
-
 Maven (Build tool)
-
 Logback/SLF4J ile merkezi loglama
-
 H2 (Test ortamı için in-memory veritabanı)
 
+-------------
 Bu projede beş mikroservis bulunmaktadır:
 
 auth-serviceKullanıcı kimlik doğrulama ve JWT token üretimi.
