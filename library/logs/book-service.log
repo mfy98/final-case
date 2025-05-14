@@ -1,0 +1,20 @@
+2025-05-14 03:43:50.260 [main] INFO  c.m.b.c.BookControllerIntegrationTest - Starting BookControllerIntegrationTest using Java 21.0.5 with PID 14112 (started by mfurk in C:\Users\mfurk\library\book-service)
+2025-05-14 03:43:50.262 [main] DEBUG c.m.b.c.BookControllerIntegrationTest - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-14 03:43:50.263 [main] INFO  c.m.b.c.BookControllerIntegrationTest - The following 1 profile is active: "test"
+2025-05-14 03:43:51.086 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-05-14 03:43:51.089 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data R2DBC repositories in DEFAULT mode.
+2025-05-14 03:43:51.248 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153 ms. Found 1 R2DBC repository interface.
+2025-05-14 03:43:53.225 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 51519 (http)
+2025-05-14 03:43:53.243 [main] INFO  c.m.b.c.BookControllerIntegrationTest - Started BookControllerIntegrationTest in 3.543 seconds (process running for 4.654)
+2025-05-14 03:43:54.269 [parallel-2] INFO  c.m.b.controller.BookController - Received request to create book: Book(id=null, title=Integration, author=Tester, isbn=INT-001, genre=Test, totalCopies=5, availableCopies=0)
+2025-05-14 03:43:54.352 [parallel-2] INFO  c.m.b.controller.BookController - Book created with id=1
+2025-05-14 03:43:54.418 [parallel-3] INFO  c.m.b.controller.BookController - Fetching book by id=1
+2025-05-14 03:43:54.452 [parallel-3] INFO  c.m.b.controller.BookController - Found book: Book(id=1, title=Integration, author=Tester, isbn=INT-001, genre=Test, totalCopies=5, availableCopies=5)
+2025-05-14 03:43:54.513 [parallel-4] INFO  c.m.b.controller.BookController - Received request to create book: Book(id=null, title=Stock, author=Tester, isbn=STK-01, genre=Test, totalCopies=2, availableCopies=0)
+2025-05-14 03:43:54.515 [parallel-4] INFO  c.m.b.controller.BookController - Book created with id=2
+2025-05-14 03:43:54.519 [parallel-5] INFO  c.m.b.controller.BookController - Decrementing availableCopies for book id=2
+2025-05-14 03:43:54.532 [parallel-5] INFO  c.m.b.controller.BookController - Decrement complete, book now: Book(id=2, title=Stock, author=Tester, isbn=STK-01, genre=Test, totalCopies=2, availableCopies=1)
+2025-05-14 03:43:54.536 [parallel-6] INFO  c.m.b.controller.BookController - Incrementing availableCopies for book id=2
+2025-05-14 03:43:54.541 [parallel-6] INFO  c.m.b.controller.BookController - Increment complete, book now: Book(id=2, title=Stock, author=Tester, isbn=STK-01, genre=Test, totalCopies=2, availableCopies=2)
+2025-05-14 03:43:54.895 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.netty.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-14 03:43:54.898 [netty-shutdown] INFO  o.s.b.w.e.netty.GracefulShutdown - Graceful shutdown complete

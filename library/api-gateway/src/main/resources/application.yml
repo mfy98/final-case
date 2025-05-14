@@ -1,0 +1,55 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: docs
+          uri: http://localhost:8080   # gateway’in kendisi
+          predicates:
+            - name: Path
+              args:
+                pattern: /v3/api-docs/**
+            - name: Path
+              args:
+                pattern: /swagger-ui.html
+            - name: Path
+              args:
+                pattern: /swagger-ui/**
+            - name: Path
+              args:
+                pattern: /webjars/**
+        - id: auth
+          uri: http://auth-service:8081
+          predicates:
+            - name: Path
+              args:
+                pattern: /auth/**
+        - id: users
+          uri: http://user-service:8082
+          predicates:
+            - name: Path
+              args:
+                pattern: /users/**
+        - id: books
+          uri: http://book-service:8083
+          predicates:
+            - name: Path
+              args:
+                pattern: /books/**
+        # --- Borrow Route ---
+        - id: borrow
+          uri: http://borrow-service:8084
+          predicates:
+            - Path=/borrow,/borrow/**,/reports/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+jwt:
+  secret: ${JWT_SECRET:B7sT5lsNO-YktTYcqUQn1NnkNerKFdlzT6qWwAcsHb0=}
