@@ -20,17 +20,13 @@ H2 (Test ortamı için in-memory veritabanı)
 
 -------------
 Bu projede beş mikroservis bulunmaktadır:
+auth-service Kullanıcı kimlik doğrulama ve JWT token üretimi.
+user-service Kullanıcı CRUD işlemleri ve rollerin yönetimi.
+book-service Kitap CRUD, arama ve pagination.
+borrow-service Ödünç alma, iade, gecikme ve geri dönüt.
+api-gateway Tüm istekleri yönlendiren merkezi gateway (Spring Cloud Gateway).
 
-auth-serviceKullanıcı kimlik doğrulama ve JWT token üretimi.
+Her mikroservis ortak PostgreSQL veritabanına sahip ve Docker Compose ile birlikte ayağa kalkmakta.
 
-user-serviceKullanıcı CRUD işlemleri ve rollerin yönetimi.
-
-book-serviceKitap CRUD, arama ve pagination.
-
-borrow-serviceÖdünç alma, iade, gecikme takibi ve raporlama.
-
-api-gatewayTüm istekleri yönlendiren merkezi gateway (Spring Cloud Gateway).
-
-Her mikroservis kendi PostgreSQL veritabanına sahiptir ve Docker Compose ile birlikte ayağa kalkar.
 ![image](https://github.com/user-attachments/assets/75c5de06-7b0e-4d32-b5b2-e3abce2aa8e6)
 ![image](https://github.com/user-attachments/assets/21496f07-0f41-4d91-b487-84499c06db75)
