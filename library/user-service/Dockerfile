@@ -10,6 +10,6 @@ COPY target/*.jar app.jar
 # Expose the port (override in compose if needed)
 ARG SERVICE_PORT
 EXPOSE ${SERVICE_PORT}
-
+ 
 # Run the application
 ENTRYPOINT ["java","-jar","/app/app.jar"]
